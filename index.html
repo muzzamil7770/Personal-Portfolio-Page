@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/zoom0.png" type="image/x-png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Personal Portfolio</title>
+  </head>
+
+  <body>
+    <header>
+      <h3 class="nav-header">MUZZAMIL</h3>
+      <div class="hamburger" id="hamburger">☰</div>
+      <nav class="manu" id="menu">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Resume</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Skills</a></li>
+          <li><a href="">Project</a></li>
+          <li><a href="">My Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="details">
+        <h5 class="hi">Hello!</h5>
+        <div class="intro">
+          I'm
+          <span class="name"
+            >Mohammad <br />
+            <h2 class="name name1">MUZZAMIL</h2>
+          </span>
+        </div>
+
+        <!-- <p class="designation" id="designation">A FrontEnd Web Developer</p> -->
+        <h1 class="designation" aria-label="A FrontEnd Web Developer">
+          <span class="typewriter"></span>
+        </h1>
+        <div class="btns">
+          <button class="hire-btn">Hire Me</button>
+          <button>My Works</button>
+        </div>
+      </div>
+      <img class="profile-pic br" src="fav-icon.png" alt="" />
+    </main>
+    <script>
+      // JavaScript to toggle the menu visibility
+      const hamburger = document.getElementById("hamburger");
+      const menu = document.getElementById("menu");
+
+      hamburger.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

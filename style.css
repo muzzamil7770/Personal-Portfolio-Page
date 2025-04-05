@@ -1,0 +1,448 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: sans-serif;
+  text-wrap: wrap;
+}
+
+/* HamBurger */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.manu {
+  display: flex;
+}
+
+body {
+  background-color: rgb(2, 2, 34);
+}
+
+header {
+  transition: background-color 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 60px;
+  padding: 12px;
+  background-color: #00000018;
+}
+
+header:hover {
+  background-color: #00000030;
+  /* background-color: #0000009c; */
+}
+
+header > h3 {
+  font-family: sans-serif;
+  cursor: context-menu;
+}
+.nav-header:hover {
+  color: #fdbb37;
+  transition: all 1s ease-in-out;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav ul li {
+  border: none;
+  padding: 5px;
+  margin-left: 20px;
+  transition: all 1s;
+  position: relative;
+}
+
+nav ul li a {
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(175, 183, 207);
+  transition: all 0.5s ease-in-out;
+  display: inline-block;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  top: 24px;
+  left: 0;
+  background-color: #fdbb37;
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
+}
+nav ul li a:hover {
+  color: #fdbb37;
+}
+nav ul li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+main {
+  margin: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container {
+  padding: 23px;
+}
+
+main .details {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 30px;
+  min-width: 30%;
+  min-height: 80vh;
+  border-radius: 12px;
+  margin: 14px 5px;
+}
+
+main .profile-pic {
+  object-fit: cover;
+  object-position: center;
+  align-items: left;
+  width: 40%;
+}
+
+.hi {
+  font-size: 14px;
+  color: #fdbb37;
+}
+
+.intro {
+  margin: 10px 0px;
+}
+
+.intro,
+.name {
+  font-size: 4.5vw;
+  font-family: monospace;
+  font-weight: bolder;
+}
+
+.name {
+  color: #fdbb37;
+}
+
+.name1 {
+  letter-spacing: 10px;
+}
+
+.designation {
+  font-family: monospace;
+  font-size: 18px;
+}
+
+.btn {
+  margin: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+button {
+  margin: 14px 2px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 8px 20px;
+  border: 1px solid #ffffff1f;
+  font-size: 17px;
+  transition: all 0.5s ease-in-out;
+}
+
+button:active {
+  border: none;
+}
+
+.hire-btn {
+  background-color: #fdbb37;
+  color: black;
+}
+
+button:hover {
+  background-color: #fcb11b;
+  color: black;
+}
+/* Aminations  */
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+
+/* Media Queries */
+/* Responsive styles */
+@media screen and (max-width: 688px) {
+  header {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 470px) {
+  main {
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  .profile-pic {
+    order: 1;
+  }
+  main .details {
+    min-height: max-content;
+  }
+  .details {
+    justify-content: flex-start;
+    gap: 0px;
+    align-items: inherit;
+    order: 2;
+    margin: auto;
+  }
+}
+@media (max-width: 620px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .manu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    top: 50px;
+    /* Adjust as needed */
+    left: 0;
+  }
+  .manu ul {
+    flex-direction: column;
+    transition: all 1s ease-in-out;
+  }
+  .manu.active {
+    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+@media screen and (max-width: 450px) {
+  main {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+/* Typing Animation */
+@keyframes typing {
+  0%,
+  2% {
+    content: " ";
+  }
+
+  2%,
+  4% {
+    content: " ";
+  }
+
+  4%,
+  8% {
+    content: "A ";
+  }
+
+  8%,
+  12% {
+    content: "A F";
+  }
+
+  12%,
+  16% {
+    content: "A Fr";
+  }
+
+  16%,
+  20% {
+    content: "A Fro";
+  }
+
+  20%,
+  24% {
+    content: "A Fron";
+  }
+
+  24%,
+  28% {
+    content: "A Front";
+  }
+
+  28%,
+  32% {
+    content: "A FrontE";
+  }
+
+  32%,
+  36% {
+    content: "A FrontEn";
+  }
+
+  36%,
+  40% {
+    content: "A FrontEnd";
+  }
+
+  40%,
+  44% {
+    content: "A FrontEnd ";
+  }
+
+  44%,
+  58% {
+    content: "A FrontEnd W";
+  }
+
+  48%,
+  52% {
+    content: "A FrontEnd We";
+  }
+
+  52%,
+  56% {
+    content: "A FrontEnd Web";
+  }
+
+  56%,
+  60% {
+    content: "A FrontEnd Web ";
+  }
+
+  60%,
+  64% {
+    content: "A FrontEnd Web D";
+  }
+
+  64%,
+  68% {
+    content: "A FrontEnd Web De";
+  }
+
+  68%,
+  72% {
+    content: "A FrontEnd Web Dev";
+  }
+
+  72%,
+  76% {
+    content: "A FrontEnd Web Deve";
+  }
+
+  76%,
+  80% {
+    content: "A FrontEnd Web Devel";
+  }
+
+  80%,
+  84% {
+    content: "A FrontEnd Web Develo";
+  }
+
+  84%,
+  88% {
+    content: "A FrontEnd Web Develop";
+  }
+
+  88%,
+  92% {
+    content: "A FrontEnd Web Developer";
+  }
+
+  92%,
+  96% {
+    content: "A FrontEnd Web Developer.";
+  }
+
+  96%,
+  97% {
+    content: "A FrontEnd Web Developer..";
+  }
+
+  97%,
+  98% {
+    content: "A FrontEnd Web Developer...";
+  }
+
+  98%,
+  99% {
+    content: "A FrontEnd Web Developer... ";
+  }
+
+  100% {
+    content: "";
+  }
+
+  /* Pause before restart */
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 7s infinite;
+  /* Adjust duration as necessary */
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 1s linear infinite;
+}
+
+.typewriter.thick::after {
+  border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+}
